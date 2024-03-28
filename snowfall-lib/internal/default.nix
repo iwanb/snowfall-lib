@@ -20,7 +20,7 @@ let
     { snowfall = snowfall-lib; }
   ];
 
-  user-lib-root = snowfall-lib.fs.get-file "lib";
+  user-lib-root = "${snowfall-config.root}/lib";
   user-lib-modules = snowfall-lib.fs.get-default-nix-files-recursive user-lib-root;
 
   user-lib = fix (user-lib:
